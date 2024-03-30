@@ -36,7 +36,7 @@ jobs:
       run: ./gradlew build
 
     - name: Permiso de ejecucion Gradle
-      run: chmod +x gradlew
+      run: chmod +x script.sh
 
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
