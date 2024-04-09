@@ -66,4 +66,4 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'App-TesisMaestria'
-          package: '$(Build.ArtifactStagingDirectory)/java-app/*.jar'
+          package: '/home/runner/work/tesismaestriaautonoma/tesismaestriaautonoma/java-app/data-0.0.1-SNAPSHOT.jar'
