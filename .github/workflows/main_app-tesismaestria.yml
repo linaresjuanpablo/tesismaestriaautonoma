@@ -66,4 +66,4 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'App-TesisMaestria'
-          package: '${{ github.workspace }}/build/libs/*.jar'
+          package: '${{ github.workspace }}/build/libs/data-0.0.1-SNAPSHOT.ja'
