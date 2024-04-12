@@ -61,7 +61,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-app
-      
+      - name: List contents of artifact directory
+        run: ls -l
+        
       - name: 'Log into Azure using github secret AZURE_CREDENTIALS'
         uses: Azure/login@v1
         with:
@@ -72,6 +74,6 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'App-TesisMaestria'
-          package: '${{ github.workspace }}/build/libs/data-0.0.1-SNAPSHOT.jar'
+          package: '~/java-app/data-0.0.1-SNAPSHOT.jar'
           #package: '/home/runner/work/tesismaestriaautonoma/tesismaestriaautonoma/build/libs/data-0.0.1-SNAPSHOT.jar'
           #package: '/home/runner/work/tesismaestriaautonoma/tesismaestriaautonoma/java-app/data-0.0.1-SNAPSHOT.jar'
