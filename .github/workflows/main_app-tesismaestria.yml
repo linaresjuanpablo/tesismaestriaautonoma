@@ -37,6 +37,9 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
         
+      - name: Print current working directory
+        run: pwd
+        
       - name: List contents of build/libs directory # Nuevo paso agregado
         run: ls -l build/libs
 
@@ -69,6 +72,6 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'App-TesisMaestria'
-          package: '${{ github.workspace }}/build/libs/*.jar'
+          package: '${{ github.workspace }}/build/libs/data-0.0.1-SNAPSHOT.jar'
           #package: '/home/runner/work/tesismaestriaautonoma/tesismaestriaautonoma/build/libs/data-0.0.1-SNAPSHOT.jar'
           #package: '/home/runner/work/tesismaestriaautonoma/tesismaestriaautonoma/java-app/data-0.0.1-SNAPSHOT.jar'
