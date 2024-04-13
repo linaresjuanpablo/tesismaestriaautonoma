@@ -52,10 +52,6 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     
     steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v4
-        with:
-          name: java-app
               
       - name: 'Log into Azure using github secret AZURE_CREDENTIALS'
         uses: Azure/login@v1
