@@ -19,6 +19,8 @@ public interface IDatosService {
 
      void fetchDataFromJsonApiAndSaveToDatabase();
 
+     //void fetchDataFromJsonApiAndSaveToDatabaseProponentes();
+
      //List<proveedores> findByDepartamento(String departamento);
 
      List<Proveedores> getAllProveedores();
