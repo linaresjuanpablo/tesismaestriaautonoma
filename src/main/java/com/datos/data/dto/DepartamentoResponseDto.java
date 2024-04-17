@@ -7,6 +7,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
+@NoArgsConstructor
 public class DepartamentoResponseDto {
     private String nombre;
     private String codigo;
@@ -19,7 +20,7 @@ public class DepartamentoResponseDto {
     }
 
 
-   // private String descripcionCategoria;
+
 
 
 

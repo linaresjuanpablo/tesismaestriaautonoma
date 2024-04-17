@@ -80,12 +80,13 @@ public class DatosServiceImpl implements IDatosService {
             responseDto.setNombre(dto.getNombre());
             responseDto.setCodigo(dto.getCodigo());
             responseDto.setMunicipio(dto.getMunicipio());
-           // responseDto.setDescripcionCategoria(dto.getDescripcionCategoria());
+
+           //responseDto.setDescripcionCategoria(dto.getDescripcionCategoria());
 
             departamentoResponseDto.add(responseDto);
         }
 
-        departamentoResponse.setDepartamentoResponseDtos(departamentoResponseDto);
+        departamentoResponse.setDepartamentoResponseDto(departamentoResponseDto);
 
         return departamentoResponse;
     }
@@ -94,17 +95,17 @@ public class DatosServiceImpl implements IDatosService {
     public List<Proveedores> getAllProveedores() {
         return (List<Proveedores>) proveedoresRepository.findAll();
     }
-   @Override
+  /* @Override
     public NitResponse  findByNitService(String nit){
        NitResponse nitResponse = new NitResponse();
        List<NitResponseDTO> nitResponseDTO = new ArrayList<>();
-       List<Proveedores> list = proveedoresRepository.findByNit(nit);
+       List<NitResponseDTO> list = proveedoresRepository.findByNit(nit);
 
        if (list == null || list.isEmpty()){
            System.out.println("no hay datos");
        }
        NitResponseDTO responseDTO = new NitResponseDTO();
-       for(Proveedores dto: list){
+       for(NitResponseDTO dto: list){
            responseDTO.setNombre(dto.getNombre());
            responseDTO.setMunicipio(dto.getMunicipio());
            responseDTO.setDepartamento(dto.getDepartamento());
@@ -118,7 +119,7 @@ public class DatosServiceImpl implements IDatosService {
        return nitResponse;
 
 
-    }
+    }*/
 
 
 }

@@ -36,11 +36,11 @@ public class datosController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/nit/{nit}")
+    /*@GetMapping("/nit/{nit}")
     public ResponseEntity<NitResponse>findByNit(@PathVariable String nit){
         NitResponse response = iDatosService.findByNitService(nit);
         return ResponseEntity.ok(response);
-    }
+    }*/
 
     @GetMapping("/proveedores")
     public List<Proveedores>getAllProveedores(){

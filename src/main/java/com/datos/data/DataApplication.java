@@ -14,9 +14,9 @@ public class DataApplication {
 		SpringApplication.run(DataApplication.class, args);
 	}
 
-	@Bean
+	/*@Bean
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
-	}
+	}*/
 
 }

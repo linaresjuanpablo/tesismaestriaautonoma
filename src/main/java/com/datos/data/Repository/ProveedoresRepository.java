@@ -15,19 +15,15 @@ import java.util.List;
 @Repository
 public interface ProveedoresRepository extends JpaRepository<Proveedores, Long> {
 
-//    List<proveedores> findByDepartamento(String Departamento);
+
 
     @Query(value = "SELECT new com.datos.data.dto.DepartamentoResponseDto(p.nombre, p.codigo, p.municipio) FROM Proveedores p WHERE p.departamento = :departamento")
     List<DepartamentoResponseDto> findByDepartamento(@Param("departamento") String departamento);
 
-    @Query(value = "SELECT * FROM proveedores WHERE nit = :nit", nativeQuery = true)
-    List<Proveedores>findByNit(@Param("nit") String nit);
 
-    //Proveedores findAllByNit(String nit);
-    /*List<NitResponseDTO> listar();*/
-
-
-
+   /* @Query(value = "SELECT new com.datos.data.dto.NitResponseDTO(nombre, municipio, departamento, tipo_empresa, nombre_representante_legal) FROM Proveedores  WHERE nit = :nit")
+    List<NitResponseDTO>findByNit(@Param("nit")String nit);
+    */
 
 
 }

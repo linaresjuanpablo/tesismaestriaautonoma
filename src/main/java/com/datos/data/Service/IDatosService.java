@@ -27,5 +27,5 @@ public interface IDatosService {
 
      DepartamentoResponse findByDepartamento(String departamento);
 
-     NitResponse findByNitService(String nit);
+     //NitResponse findByNitService(String nit);
 }
